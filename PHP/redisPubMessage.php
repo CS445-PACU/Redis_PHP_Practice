@@ -1,32 +1,28 @@
 <?php
   require_once('redisConn.php');
+  require_once('redisChannelKey.php');
 
   $redis = connRedisLocal();
 
+  // get name from command line args
   $myName = $argv[1];
 
-  $queueKey = "CS445:MSG_PUB";
-
-  $redis->del($queueKey);
-
+  
   $counter = 0;
-  while( true )
-  {
-    $msg = "MESSAGE:".$myName.":".$counter;
-    $redis->publish($queueKey, $msg);
-    print("PUBLISH: ". $msg. "\n");
-    $counter += 1;
+  //while( true )
+  // "MESSAGE $myName $counter
+  // publish messge to $channelKey
+  // sleep(2)
+  
 
-    
-    $jsonMsg['sender'] = $myName;
-    $jsonMsg['data'] = $msg;
+  // BONUS
+  // create associative array
+  //  $jsonMsg['sender'] = $myName;
+  //  $jsonMsg['data'] = $msg;
 
-    $jsonData = json_encode ($jsonMsg);
-
-    $redis->publish($queueKey, $jsonData);
-    
-    sleep(2);  
-  }
+  // encode array into json
+  // publish json to $channelKey."json"
+  // sleep(2);  
 
 
 ?>
