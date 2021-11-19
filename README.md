@@ -1,4 +1,6 @@
-# PHP Practice
+# Redis_PHP_Practice
+
+[Redis Commands](https://redis.io/commands)
 
 ## VS Code
 
@@ -24,10 +26,10 @@ In the terminal, type
 make copy
 ```
 
-This will copy your PHP code to /srv/www/htdocs/php/PUNETID/PHPPractice
+This will copy your PHP code to /srv/www/htdocs/php/PUNETID/Redis_PHP_Practice
 
 You can open this website in your VM via:
 
-http://localhost/php/PUNETID/PHPPractice/
+http://localhost/php/PUNETID/Redis_PHP_Practice/
 
 (hint: you can edit this README file to change PUNETID to your actual PUNETID so you can use the link above.)
